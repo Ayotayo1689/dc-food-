@@ -1,0 +1,17 @@
+.cardDetail {
+    background: #ffffff;
+    box-shadow: 6px 6px 12px #d6d6d6,
+    -6px -6px 12px #ffffff;
+    border-radius: 18px;
+}
+
+.cardDetail:nth-child(2) {
+    background: #F6AD54;
+    /*transform: translateY(-40px);*/
+}
+
+@media screen and (max-width: 968px) {
+    .cardDetail:nth-child(2) {
+        background: #F6AD54;
+    }
+}

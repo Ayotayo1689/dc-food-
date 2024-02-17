@@ -1,0 +1,64 @@
+import {Box, Container, Flex, HStack, Image, Link, Text} from '@chakra-ui/react';
+import NextLink from 'next/link'
+import {FaForward} from "react-icons/fa";
+
+const Header = ({title, href, LinkTitle}) => {
+    return (
+
+        <Box
+            bgColor={'orange.300'}
+        >
+            <Container maxW={'7xl'} py={{base: '1rem', md: '1rem'}}>
+                <Flex
+                    fontFamily={'Inter'}
+                    alignItems="center"
+                    justify="space-between"
+                    direction={{base: 'column-reverse', md: 'row', lg: 'row'}}
+                    position={'relative'}
+                >
+                    <Box
+                        display={{base: 'flex', md: 'flex', lg: 'block'}}
+                        flexDir={'column'}
+                        alignItems={{base: 'center', md: 'center', lg: 'flex-start'}}
+                        justify={{base: 'center', md: 'center', lg: 'space-between'}}
+                        marginTop={{base: '0', md: '3rem', lg: '0'}}>
+
+                        <Text
+                            lineHeight="1.26"
+                            fontWeight="medium"
+                            fontSize={{base: '40px', md: '50px', lg: '76px'}}
+                            letterSpacing="-0.04em"
+
+                        >
+                            {title}
+                        </Text>
+                        <HStack fontSize="18px" spacing={4} justifyContent={'center'} pt={8}>
+                            <Link as={NextLink} href={href || '/'} fontWeight={600} borderBottom={'1px solid'}
+                                  _hover={{color: "red", transition: "all 0.5s"}}>
+                                {LinkTitle}
+                            </Link>
+                            <Box>
+                                <FaForward size={18} color={'red'}/>
+                            </Box>
+                            <Text>{title}</Text>
+                        </HStack>
+
+
+                    </Box>
+
+                    <Box>
+                        <Image src={'/assets/hero/dcfood-hero.webp'} alt={'hero image'}
+                               width={{base: '100%', md: '80%'}}
+                               height={{base: '150px', md: '200px'}}/>
+                    </Box>
+                </Flex>
+
+            </Container>
+
+        </Box>
+
+    );
+};
+
+export default Header;
+

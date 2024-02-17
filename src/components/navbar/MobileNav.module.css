@@ -1,0 +1,45 @@
+.mobileNavBar {
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.links, .linksLast, .linksFlex {
+    font-size: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #c5c6d0;
+}
+
+.linksLast {
+    border-top: 1px solid #c5c6d0;
+}
+
+.linksFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inlinks {
+    margin-left: 25px;
+    font-size: 13px;
+    padding: 5px;
+    display: block;
+}
+
+.links:hover, .inlinks:hover, .linksLast:hover, .linksFlex:hover {
+    color: red;
+    transition: all 0.8s;
+}
+
+.transition {
+    transition: all 1.2s ease-in-out;
+}
+
+.navbar {
+    /* your existing styles */
+    transition: transform 10s ease-in-out;
+}
+
+.navbarOpen {
+    transform: translateX(0); /* adjust the value as needed */
+}
