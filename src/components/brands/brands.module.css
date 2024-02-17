@@ -1,0 +1,9 @@
+@media (max-width: 480px) {
+    .imageContainer {
+        width: 20%;
+    }
+
+    .brandsImage {
+        width: 50px;
+    }
+}
